@@ -242,6 +242,9 @@ h5 {
 .hero-img img {
   display: block;
   position: relative;
+  width: 100%;
+  max-width: 360px; /* adjust to desired size */
+  height: auto; /* maintain aspect ratio */
 }
 
 .about-social-list {
