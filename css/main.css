@@ -243,8 +243,10 @@ h5 {
   display: block;
   position: relative;
   width: 100%;
-  max-width: 360px; /* adjust to desired size */
-  height: auto; /* maintain aspect ratio */
+  max-width: 360px;
+  /* adjust to desired size */
+  height: auto;
+  /* maintain aspect ratio */
 }
 
 .about-social-list {
@@ -266,14 +268,12 @@ h5 {
 }
 
 .social-links-row a {
-  filter: invert(35%) sepia(11%) saturate(160%) hue-rotate(145deg)
-    brightness(88%) contrast(80%);
+  filter: invert(35%) sepia(11%) saturate(160%) hue-rotate(145deg) brightness(88%) contrast(80%);
   transition: all 0.3s ease-in-out;
 }
 
 .social-links-row a:hover {
-  filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(305deg)
-    brightness(97%) contrast(103%);
+  filter: invert(0%) sepia(0%) saturate(7500%) hue-rotate(305deg) brightness(97%) contrast(103%);
 }
 
 /* About section */
@@ -316,6 +316,7 @@ h5 {
 .skill-percent {
   float: right;
 }
+
 .skill-bar__progress {
   background-color: var(--gray-color);
   border-radius: 5px;
@@ -328,8 +329,10 @@ h5 {
 .skill-bar__fill {
   background-color: var(--secondary-accent);
   height: 4px;
-  width: 0; /* Initial width is 0 */
-  transition: width 1.5s ease-in-out; /* Smooth transition for the fill */
+  width: 0;
+  /* Initial width is 0 */
+  transition: width 1.5s ease-in-out;
+  /* Smooth transition for the fill */
 }
 
 .about-download-btn {
@@ -351,8 +354,7 @@ h5 {
   display: block;
   height: 50px;
   margin: 0 auto 20px;
-  filter: invert(33%) sepia(7%) saturate(243%) hue-rotate(145deg)
-    brightness(94%) contrast(81%);
+  filter: invert(33%) sepia(7%) saturate(243%) hue-rotate(145deg) brightness(94%) contrast(81%);
 }
 
 .service-card-title {
@@ -526,8 +528,7 @@ h5 {
 }
 
 .footer-social a:hover {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
-    brightness(102%) contrast(102%);
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 
 .footer-copyright {
@@ -581,8 +582,7 @@ h5 {
   justify-content: center;
   width: 100%;
   height: 100%;
-  filter: invert(4%) sepia(23%) saturate(2306%) hue-rotate(148deg)
-    brightness(91%) contrast(90%);
+  filter: invert(4%) sepia(23%) saturate(2306%) hue-rotate(148deg) brightness(91%) contrast(90%);
 }
 
 .goToTop img {
@@ -591,8 +591,7 @@ h5 {
 }
 
 .goToTop:hover {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
-    brightness(102%) contrast(102%);
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 
 .goToTop.reveal {
@@ -627,7 +626,7 @@ h5 {
   display: inline-block;
 }
 
-.jumping-dots > div {
+.jumping-dots>div {
   position: absolute;
   content: "";
   top: 0;
@@ -638,24 +637,24 @@ h5 {
   border-radius: 50%;
 }
 
-.jumping-dots > div:nth-of-type(1) {
+.jumping-dots>div:nth-of-type(1) {
   left: 20px;
 }
 
-.jumping-dots > div:nth-of-type(3) {
+.jumping-dots>div:nth-of-type(3) {
   left: -20px;
 }
 
-.jumping-dots > div {
+.jumping-dots>div {
   animation: jumping-dots 1.2s infinite ease;
   animation-delay: 0.2s;
 }
 
-.jumping-dots > div:nth-of-type(1) {
+.jumping-dots>div:nth-of-type(1) {
   animation-delay: 0.4s;
 }
 
-.jumping-dots > div:nth-of-type(3) {
+.jumping-dots>div:nth-of-type(3) {
   animation-delay: 0s;
 }
 
@@ -673,13 +672,16 @@ h5 {
   }
 }
 
+/*---------------------------------------------------------------------*/
 /* CONTACT SECTION FIX */
 
 .services-row {
   display: flex;
-  justify-content: center;   /* centres the cards horizontally */
+  justify-content: center;
+  /* centres the cards horizontally */
   align-items: flex-start;
-  gap: 100px;                /* space between cards */
+  gap: 100px;
+  /* space between cards */
   text-align: center;
   flex-wrap: wrap;
 }
@@ -761,6 +763,21 @@ h5 {
   gap: 30px;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phone */
+@media (max-width: 768px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 .tool-card {
   background: #f4f4f4;
   padding: 28px;
@@ -770,7 +787,7 @@ h5 {
 
 .tool-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .tool-card h3 {
@@ -782,4 +799,62 @@ h5 {
   font-size: 15px;
   line-height: 1.6;
   color: #555;
+}
+
+/* PROJECT SECTION */
+
+.projects {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 42px;
+  margin-bottom: 60px;
+}
+
+.project-feature {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+.project-info h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.project-info p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.project-tags {
+  font-size: 14px;
+  color: #888;
+  letter-spacing: 0.5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .project-feature {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+
 }
