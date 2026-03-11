@@ -7,7 +7,7 @@ Structural engineering student interested in **computational design, structural 
 
 This repository hosts the source code for my portfolio website:
 
-🌐 https://gloriachan.github.io
+🌐 https://gloriachan22.github.io
 
 ---
 
@@ -46,5 +46,5 @@ Machine Learning
 
 ## Contact
 
-GitHub: https://github.com/gloriachan  
+GitHub: https://github.com/gloriachan22  
 LinkedIn: (your LinkedIn link)
