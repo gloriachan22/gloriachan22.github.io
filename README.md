@@ -34,17 +34,32 @@ Discrete choice modelling of cycling adoption using **Biogeme**, analysing polic
 
 ## Tools & Technologies
 
-Python  
-Grasshopper  
-Rhino  
-MATLAB  
-Docker  
-YADE  
-Machine Learning
+**Programming & Data**
+Python • MATLAB • Excel VBA • Git • Streamlit
+
+**Machine Learning & Data Science**
+scikit-learn • SHAP • Pandas • NumPy • SMOTE • Model evaluation (F1, precision–recall)
+
+**Computational & Parametric Design**
+Rhino • Grasshopper • RhinoVAULT • Parametric modelling
+
+**Structural Analysis**
+Oasys GSA • STAAD.Pro • Structural modelling and analysis
+
+**Design & BIM**
+Revit • AutoCAD • SketchUp • Enscape
+
+**Simulation & Modelling**
+YADE (DEM) • Lifecycle assessment (SimaPro)
+
+**Workflow & Collaboration**
+GitHub • Docker • Bluebeam • HotDocs
 
 ---
 
 ## Contact
 
+Email: gloria.chan22@outlook.com
+Mobile: +44 7956 091507
 GitHub: https://github.com/gloriachan22  
-LinkedIn: (your LinkedIn link)
+LinkedIn: https://www.linkedin.com/in/gloria-heiman-chan/
