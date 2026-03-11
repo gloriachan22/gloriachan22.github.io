@@ -944,11 +944,6 @@ h5 {
   gap: 12px;
 }
 
-.project-feature__gallery--two {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
 
 .project-feature__gallery .project-box {
   max-width: 100%;
@@ -992,13 +987,3 @@ h5 {
     gap: 20px;
   }
 
-  .project-feature__gallery--two {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-feature__gallery--two {
-    grid-template-columns: 1fr;
-  }
-}
