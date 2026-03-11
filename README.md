@@ -1,65 +1,56 @@
-# Hei Man (Gloria) Chan
+# Simple Developer Portfolio Template
 
-MEng Civil & Environmental Engineering  
-Imperial College London
+![Project Preview](portfolio_preview.jpg)
 
-Structural engineering student interested in **computational design, structural form-finding, and infrastructure systems**.
+## Description
 
-This repository hosts the source code for my portfolio website:
+This is a very simple, but elegant responsive portfolio template built using plain JavaScript, HTML, and CSS. It’s designed to be easily customizable, allowing any developer to quickly create a personal portfolio site. Below you'll find detailed information about the features and how to use this template.
 
-🌐 https://gloriachan22.github.io
+## Table of Contents
 
----
+- [Features](#features)
+- [Live Preview](#live-preview)
+- [Usage](#usage)
+- [Recent Updates](#recent-updates)
+- [License](#license)
 
-## Selected Work
+## Features
 
-### Lunar Regolith Shell Structures (Final Year Project)
+- Responsive Design
+- Single-page layout
+- Simple and customizable
+- PHP Mailer Integration
 
-Parametric exploration of compression-only shell structures for extraterrestrial habitats.  
-Geometry generated using **Rhino / Grasshopper** and evaluated through **Discrete Element Method (YADE)** simulations.
+## Live Preview
 
-### Thrust Network Pavilion
+Check out the live preview of the Simple Developer Portfolio [here](https://hhlitval.github.io/simple-portfolio-template).
 
-Investigation of funicular shell structures using **thrust network analysis** and parametric workflows.
+## Usage
 
-### Solar Energy Forecasting
+To use this template, follow these steps:
 
-Machine learning models predicting solar plant output using **Python and scikit-learn**, with interpretability analysis using **SHAP**.
+1. **Clone the Repository**: 
+    ```bash
+    git clone https://github.com/hhlitval/simple-portfolio-template.git
+    ```
+2. **Customization**:
+   - Update `index.html` with your information.
+   - Modify `style.css` for custom styles.
+3. **Email Integration**:
+   To enable email functionality:
+   - Upload the project to a PHP-enabled server.
+   - Configure the `mail.php` file with your email credentials.
+4. **Deployment**:
+   - Host the project on a server that supports PHP for email functionality.
+   - **If hosting on GitHub Pages, note that email handling will not work, since GitHub Pages is a static hosting service**.
 
-### Cycling Demand Modelling
+## Recent Updates
 
-Discrete choice modelling of cycling adoption using **Biogeme**, analysing policy impacts on transport behaviour.
+- Refactored font sizes and styles for improved readability and balance.
+- Reworked animations for smoother transitions and a modern look.
+- Removed the preloader for a faster, simplified user experience.
+- Added [PHP Mailer](https://github.com/PHPMailer/PHPMailer) integration for email handling (requires a PHP-enabled server, not supported on GitHub Pages).
 
----
+## License
 
-## Tools & Technologies
-
-**Programming & Data**
-Python • MATLAB • Excel VBA • Git • Streamlit
-
-**Machine Learning & Data Science**
-scikit-learn • SHAP • Pandas • NumPy • SMOTE • Model evaluation (F1, precision–recall)
-
-**Computational & Parametric Design**
-Rhino • Grasshopper • RhinoVAULT • Parametric modelling
-
-**Structural Analysis**
-Oasys GSA • STAAD.Pro • Structural modelling and analysis
-
-**Design & BIM**
-Revit • AutoCAD • SketchUp • Enscape
-
-**Simulation & Modelling**
-YADE (DEM) • Lifecycle assessment (SimaPro)
-
-**Workflow & Collaboration**
-GitHub • Docker • Bluebeam • HotDocs
-
----
-
-## Contact
-
-Email: gloria.chan22@outlook.com
-Mobile: +44 7956 091507
-GitHub: https://github.com/gloriachan22  
-LinkedIn: https://www.linkedin.com/in/gloria-heiman-chan/
+This project is licensed under the MIT License.
