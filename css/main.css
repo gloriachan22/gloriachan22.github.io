@@ -815,69 +815,40 @@ h5 {
   margin-bottom: 60px;
 }
 
-/* ── Alternating row ── */
+/* ── Row: stacks text above, images below ── */
 .proj-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  margin-bottom: 2px;           /* thin gap between rows */
-  min-height: 480px;
-  overflow: hidden;
-  position: relative;
-}
-
-.proj-row--reverse {
-  direction: rtl;               /* flip column order */
-}
-
-.proj-row--reverse > * {
-  direction: ltr;               /* restore text inside */
-}
-
-/* ── Image cell ── */
-.proj-image-wrap {
-  position: relative;
-  overflow: hidden;
-  background: #0c1618;
-}
-
-.proj-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-              filter 0.65s ease;
-  filter: grayscale(20%);
-}
-
-.proj-row:hover .proj-image {
-  transform: scale(1.04);
-  filter: grayscale(0%);
-}
-
-/* ── Large index number (decorative) ── */
-.proj-number {
-  position: absolute;
-  bottom: 16px;
-  left: 20px;
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 400;
-  text-transform: uppercase;
-  pointer-events: none;
-}
-
-/* ── Info cell ── */
-.proj-info {
-  padding: 52px 56px;
-  background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-bottom: 80px;
+  padding-bottom: 80px;
   border-bottom: 1px solid #e8e8e8;
-  border-top: 1px solid #e8e8e8;
+  position: relative;
+}
+
+.proj-row:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* ── Info block (top): left col = index+title+subtitle, right col = desc+tags ── */
+.proj-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 60px;
+  margin-bottom: 40px;
+  align-items: start;
+}
+
+.proj-info-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.proj-info-right {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
 }
 
 .proj-date {
@@ -885,8 +856,17 @@ h5 {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #999;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
   font-weight: 400;
+}
+
+.proj-number {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: #ccc;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 14px;
 }
 
 .proj-title {
@@ -899,11 +879,10 @@ h5 {
 }
 
 .proj-subtitle {
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.13em;
   color: #888;
-  margin-bottom: 24px;
   font-weight: 400;
 }
 
@@ -911,11 +890,9 @@ h5 {
   font-size: 15px;
   line-height: 1.75;
   color: #4a4e4f;
-  max-width: 480px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
-/* ── Tags ── */
 .proj-tags {
   display: flex;
   flex-wrap: wrap;
@@ -938,39 +915,79 @@ h5 {
   color: #0c1618;
 }
 
+/* ── Images block (bottom) ── */
+/* flex: each .proj-image-wrap gets equal width automatically,
+   so 1 image = full width, 2 = half each, 3 = a third each    */
+.proj-images {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.proj-images .proj-image-wrap {
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  background: #0c1618;
+  aspect-ratio: 16 / 10;
+}
+
+.proj-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              filter 0.65s ease;
+  filter: grayscale(15%);
+}
+
+.proj-row:hover .proj-image {
+  transform: scale(1.03);
+  filter: grayscale(0%);
+}
+
 
 /* =============================================================
    MEDIA.CSS ADDITIONS — append to your existing media.css
    ============================================================= */
 
-@media (max-width: 1024px) {
+@media (max-width: 977px) {
   .proj-info {
-    padding: 40px 40px;
+    grid-template-columns: 1fr;
+    gap: 20px 0;
   }
 
   .proj-title {
     font-size: 22px;
   }
 
-  .proj-desc {
-    font-size: 14px;
+  .proj-images {
+    gap: 8px;
+  }
+
+  .proj-images .proj-image-wrap {
+    aspect-ratio: 4 / 3;
+  }
+
+  .projects {
+    padding: 80px 0;
+  }
+
+  .proj-row {
+    margin-bottom: 60px;
+    padding-bottom: 60px;
   }
 }
 
-@media (max-width: 768px) {
-  .proj-row,
-  .proj-row--reverse {
-    grid-template-columns: 1fr;
-    direction: ltr;
-    min-height: auto;
+@media (max-width: 600px) {
+  .proj-images {
+    flex-direction: column;
   }
 
-  .proj-image-wrap {
-    height: 280px;
-  }
-
-  .proj-info {
-    padding: 36px 28px;
+  .proj-images .proj-image-wrap {
+    aspect-ratio: 16 / 9;
+    flex: none;
   }
 
   .proj-title {
@@ -978,33 +995,15 @@ h5 {
   }
 
   .proj-desc {
-    max-width: 100%;
+    font-size: 14px;
   }
 
   .projects {
     padding: 60px 0;
   }
-}
 
-@media (max-width: 480px) {
-  .proj-image-wrap {
-    height: 220px;
-  }
-
-  .proj-info {
-    padding: 28px 20px;
-  }
-
-  .proj-title {
-    font-size: 18px;
-  }
-
-  .proj-subtitle {
-    font-size: 11px;
-  }
-
-  .proj-desc {
-    font-size: 13.5px;
-    line-height: 1.7;
+  .proj-row {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
 }
